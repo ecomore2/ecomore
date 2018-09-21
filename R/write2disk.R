@@ -9,6 +9,7 @@
 #' `folder` is. Default value is 2.
 #'
 #' @author Marc Choisy
+#' @export
 write2disk <- function(x, folder, up = 2) {
   filename <- as.character(as.list(match.call())$x)
   folder <- paste0(paste(rep("../", 2), collapse = ""), folder)
