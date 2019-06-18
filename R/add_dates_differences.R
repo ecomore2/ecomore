@@ -9,6 +9,8 @@
 #' least 4 Date columns: "onset", "hospitalization", "consultation" and
 #' "sample_collection".
 #'
+#' @return the data frame df augmented with 6 columns.
+#'
 #' @author Marc Choisy
 #'
 #' @examples

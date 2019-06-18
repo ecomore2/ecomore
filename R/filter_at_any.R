@@ -12,6 +12,8 @@
 #' should fullfills.
 #' @sel one tidyselect function.
 #'
+#' @return the filtered data frame df.
+#'
 #' @author Marc Choisy
 #'
 #' @examples

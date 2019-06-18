@@ -13,6 +13,9 @@ coded "positive" and "negative" respectively and "serotype" where dengue
 serotype x should be coded by a character string containing "dengue", with all
 other values not containing this pattern.}
 }
+\value{
+the data frame df augmented with 2 columns.
+}
 \description{
 This funtion adds 2 columns to a data frame of PACS structure: one column
 named "tested" informing whether a test (either PCR, NS1 or serotype) has

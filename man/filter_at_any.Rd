@@ -11,6 +11,9 @@ filter_at_any(df, pattern, f, sel)
 least 4 Date columns: "onset", "hospitalization", "consultation" and
 "sample_collection".}
 }
+\value{
+the filtered data frame df.
+}
 \description{
 This function filters a data frame so that at least one of the columns with a
 name matching a given pattern fullfills a condition specified by a given

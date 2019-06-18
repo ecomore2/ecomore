@@ -11,6 +11,9 @@ add_dates_differences(df)
 least 4 Date columns: "onset", "hospitalization", "consultation" and
 "sample_collection".}
 }
+\value{
+the data frame df augmented with 6 columns.
+}
 \description{
 This function adds 6 dates difference between the 4 following dates variables:
 "onset", "hospitalization", "consultation" and "sample_collection". The names

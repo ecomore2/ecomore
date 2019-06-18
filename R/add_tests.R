@@ -11,6 +11,8 @@
 #' serotype x should be coded by a character string containing "dengue", with all
 #' other values not containing this pattern.
 #'
+#' @return the data frame df augmented with 2 columns.
+#'
 #' @author Marc Choisy
 #'
 #' @examples
