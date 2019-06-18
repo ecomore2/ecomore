@@ -28,7 +28,7 @@
 #' @importFrom dplyr %>% mutate mutate_at filter select starts_with rowwise do
 #'
 #' @export
-filter_dates <- function(df, pattern, f, sel) {
+filter_at_any <- function(df, pattern, f, sel) {
   df %>%
     mutate_at(vars(sel(pattern)), f) %>%
     mutate(problem = select(., sel(pattern)) %>%

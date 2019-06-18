@@ -2,7 +2,7 @@
 
 export(add_dates_differences)
 export(add_tests)
-export(filter_dates)
+export(filter_at_any)
 export(write2disk)
 importFrom(dplyr,"%>%")
 importFrom(dplyr,do)
