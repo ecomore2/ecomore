@@ -14,7 +14,8 @@ least 4 Date columns: "onset", "hospitalization", "consultation" and
 \description{
 This function adds 6 dates difference between the 4 following dates variables:
 "onset", "hospitalization", "consultation" and "sample_collection". The names
-of these new variables are "onset_hospitalization", "onset_consultation", etc...
+of these new variables all start with "diff_": "diff_onset_hospitalization",
+"diff_onset_consultation", etc...
 }
 \examples{
 pacs <- readr::read_csv("../../R code/pacs/data/pacs.csv",

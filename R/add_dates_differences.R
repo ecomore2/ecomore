@@ -2,7 +2,8 @@
 #'
 #' This function adds 6 dates difference between the 4 following dates variables:
 #' "onset", "hospitalization", "consultation" and "sample_collection". The names
-#' of these new variables are "onset_hospitalization", "onset_consultation", etc...
+#' of these new variables all start with "diff_": "diff_onset_hospitalization",
+#' "diff_onset_consultation", etc...
 #'
 #' @param df a data frame of the structure of PACS data. It should contain at
 #' least 4 Date columns: "onset", "hospitalization", "consultation" and
@@ -21,10 +22,10 @@
 #' @export
 add_dates_differences <- function(df) {
   df %>%
-    mutate(onset_hospitalization             = as.integer(onset           - hospitalization),
-           onset_consultation                = as.integer(onset           - consultation),
-           onset_sample_collection           = as.integer(onset           - sample_collection),
-           hospitalization_consultation      = as.integer(hospitalization - consultation),
-           hospitalization_sample_collection = as.integer(hospitalization - sample_collection),
-           consultation_sample_collection    = as.integer(consultation    - sample_collection))
+    mutate(diff_onset_hospitalization             = as.integer(onset           - hospitalization),
+           diff_onset_consultation                = as.integer(onset           - consultation),
+           diff_onset_sample_collection           = as.integer(onset           - sample_collection),
+           diff_hospitalization_consultation      = as.integer(hospitalization - consultation),
+           diff_hospitalization_sample_collection = as.integer(hospitalization - sample_collection),
+           diff_consultation_sample_collection    = as.integer(consultation    - sample_collection))
 }
