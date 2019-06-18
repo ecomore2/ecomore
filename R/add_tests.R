@@ -27,6 +27,7 @@
 add_tests <- function(df) {
   df %>%
     mutate(tested    = pcr == "positive" | ns1 == "positive" | (pcr == "negative" & ns1 == "negative") | grepl("dengue", serotype),
+           tested    = ifelse(is.na(tested), FALSE, tested),
            confirmed = pcr == "positive" | ns1 == "positive" | grepl("dengue", serotype),
            confirmed = ifelse(tested, confirmed, NA))
 }
