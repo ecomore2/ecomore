@@ -22,7 +22,7 @@
 #'
 #' pacs %>%
 #'   ecomore::add_dates_differences() %>%
-#'   filter_at_any("diff_", function(x) abs(x) > threshold) %>%
+#'   filter_at_any("diff_", function(x) abs(x) > 15, starts_with) %>%
 #'   select(id, onset, hospitalization, consultation, sample_collection)
 #'
 #' @importFrom dplyr %>% mutate mutate_at filter select starts_with rowwise do
@@ -30,8 +30,8 @@
 #' @export
 filter_dates <- function(df, pattern, f, sel) {
   df %>%
-    mutate_at(vars(starts_with(pattern)), f) %>%
-    mutate(problem = select(., starts_with(pattern)) %>%
+    mutate_at(vars(sel(pattern)), f) %>%
+    mutate(problem = select(., sel(pattern)) %>%
              rowwise() %>%
              do(a = any(is.na(.))) %>%
              unlist()) %>%

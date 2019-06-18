@@ -24,7 +24,7 @@ pacs <- readr::read_csv("../../R code/pacs/data/pacs.csv",
 
 pacs \%>\%
   ecomore::add_dates_differences() \%>\%
-  filter_at_any("diff_", function(x) abs(x) > threshold) \%>\%
+  filter_at_any("diff_", function(x) abs(x) > 15, starts_with) \%>\%
   select(id, onset, hospitalization, consultation, sample_collection)
 
 }
