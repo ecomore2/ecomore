@@ -12,26 +12,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-# dplyrx <img src="man/figures/logo.png" align="right" width=120/>
+# ecomore
 
 [![Travis-CI Build Status](https://travis-ci.org/choisy/ecomore.svg?branch=master)](https://travis-ci.org/choisy/ecomore)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ecomore)](https://cran.r-project.org/package=ecomore)
 
-`ecomore` is *************************************************
-
 ## Installation
 
-You can install `ecomore` from GitHub with:
+You can install the `ecomore` R package from GitHub by typing the following command:
 
-```{r gh-installation, eval = FALSE}
-# install.packages("devtools")
-devtools::install_github("choisy/ecomore")
+```{r installation, eval = FALSE}
+if (! "devtools" %in% rownames(installed.packages())) install.packages("devtools")
+devtools::install_github("ecomore2/ecomore")
 ```
 
-## Example
-
-*** Here explain a simple example **********************************************
-
-```{r}
-# *** Here give the code of the simple example *********************************
-```
